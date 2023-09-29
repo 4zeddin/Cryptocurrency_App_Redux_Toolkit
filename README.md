@@ -32,4 +32,4 @@ Welcome to the React Cryptocurrency App, a powerful web application for tracking
 4. Run `npm start` to start the development server.
 
 📬 Contact:
-For inquiries, please contact [azeddinaitwaalla@gmail.com].
+[azeddinaitwaalla@gmail.com].
