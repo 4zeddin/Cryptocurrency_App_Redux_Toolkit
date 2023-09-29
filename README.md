@@ -9,7 +9,7 @@ Welcome to the React Cryptocurrency App, a powerful web application for tracking
 - Latest cryptocurrency news from Bing News API
 - User-friendly interface with Ant Design icons
 
-🔧 Technologies Used:
+🔧 Libraries Used:
 - React
 - Redux Toolkit
 - Axios
