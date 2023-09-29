@@ -31,8 +31,5 @@ Welcome to the React Cryptocurrency App, a powerful web application for tracking
 3. Configure your API keys and settings.
 4. Run `npm start` to start the development server.
 
-👨‍💻 Contributors:
-- [azeddin]([link-to-your-github-profile](https://github.com/4zeddin))
-
 📬 Contact:
 For inquiries, please contact [azeddinaitwaalla@gmail.com].
