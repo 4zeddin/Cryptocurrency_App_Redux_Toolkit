@@ -12,13 +12,14 @@ Welcome to the React Cryptocurrency App, a powerful web application for tracking
 🔧 Technologies Used:
 - React
 - Redux Toolkit
+- Ant Design
 - Axios
 - Chart.js
 - HTML React Parser
 - Millify
 - Moment
 - React Chartjs 2
-- Ant Design
+- Local Storage
 
 📈 Explore the world of cryptocurrencies and stay up-to-date with market trends. Try the React Cryptocurrency App today!
 
