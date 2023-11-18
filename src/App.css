@@ -23,12 +23,12 @@ a:hover {
 }
 
 .navbar {
-    flex: 0.2;
+    flex: 20%;
     background-color: rgb(0, 21, 41);
 }
 
 .main {
-    flex: 0.8;
+    flex: 105%;
     width: 100%;
 
 }
@@ -88,6 +88,10 @@ a:hover {
 @media screen and (max-width:1170px) {
     .main {
         margin-left: 50px;
+        flex: 0.8;
+    }
+    .navbar {
+        flex: 0.2;
     }
 }
 
@@ -399,10 +403,40 @@ a:hover {
     margin-top: 20px !important;
 }
 
-.footer {
+/* .footer {
     background-color: #001529;
     display: flex;
     flex-direction: column;
     padding: 20px;
     align-items: center;
+} */
+
+.footer {
+    background-color: #001529;
+    /* Set your desired background color */
+    padding: 20px;
+    /* Adjust the padding as needed */
+    color: #fff;
+    /* Set the text color */
+}
+
+.footer a {
+    color: #fff;
+    /* Set link color */
+    margin: 0 10px;
+    /* Add margin between social icons */
+}
+
+.footer a:hover {
+    color: #1890ff;
+    /* Set link color on hover */
+}
+
+.footer .ant-typography {
+    color: #666;
+    /* Set the color for the copyright text */
+    text-align: center;
+    /* Center the copyright text */
+    margin-top: 1rem;
+    /* Adjust the top margin as needed */
 }
