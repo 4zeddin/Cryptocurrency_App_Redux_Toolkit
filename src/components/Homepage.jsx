@@ -5,7 +5,7 @@ import { Row, Col, Typography, Statistic } from "antd";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 import Cryptocurrencie from "./Cryptocurrencie";
 import News from "./News";
-import { LoadingOutlined } from "@ant-design/icons";
+import Loader from "./Loader";
 const { Title } = Typography;
 
 const Homepage = () => {
@@ -32,7 +32,7 @@ const Homepage = () => {
   if (isFetching || !state) {
     return (
       <h3>
-        <LoadingOutlined /> Loading...
+        <Loader /> 
       </h3>
     );
   }

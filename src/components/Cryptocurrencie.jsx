@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import millify from "millify";
 import { Row, Col, Input, Card } from "antd";
 import { useGetCryptosQuery } from "../services/cryptoApi";
-import { LoadingOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
+import Loader from "./Loader";
 const { Search } = Input;
 
 const Cryptocurrencie = ({ numberOfCardsToShow }) => {
-  const { data, isFetching } = useGetCryptosQuery();
+  const { data, isLoading, isError } = useGetCryptosQuery();
   const [cryptos, setCryptos] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -34,12 +35,16 @@ const Cryptocurrencie = ({ numberOfCardsToShow }) => {
     }
   }, [data, search, numberOfCardsToShow]);
 
-  if (isFetching || !cryptos) {
+  if (isLoading) {
     return (
-      <h3>
-        <LoadingOutlined /> Loading...
-      </h3>
+      <h1>
+        <Loader />
+      </h1>
     );
+  }
+
+  if (isError) {
+    return <p>Error fetching data</p>;
   }
 
   return (
@@ -55,18 +60,20 @@ const Cryptocurrencie = ({ numberOfCardsToShow }) => {
           />
         </div>
       )}
-      <Row gutter={[32, 32]} >
-        {cryptos.map((c, i) => (
-          <Col xs={24} sm={12} lg={6} className="crypto-card" key={i}>
-            <Card
-              title={`${c.rank}. ${c.name}`}
-              extra={<img className="crypto-image" src={c.iconUrl} />}
-              hoverable
-            >
-              <p>Price: {millify(c.price)}</p>
-              <p>Market Cap: {millify(c.marketCap)}</p>
-              <p>Daily Change: {millify(c.change)}</p>
-            </Card>
+      <Row gutter={[32, 32]}>
+        {cryptos.map((c) => (
+          <Col xs={24} sm={12} lg={6} className="crypto-card">
+            <Link to={`/crypto/${c.uuid}`} key={c.uuid}>
+              <Card
+                title={`${c.rank}. ${c.name}`}
+                extra={<img className="crypto-image" src={c.iconUrl} />}
+                hoverable
+              >
+                <p>Price: {millify(c.price)}</p>
+                <p>Market Cap: {millify(c.marketCap)}</p>
+                <p>Daily Change: {millify(c.change)}</p>
+              </Card>
+            </Link>
           </Col>
         ))}
       </Row>
