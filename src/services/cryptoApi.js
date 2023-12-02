@@ -29,6 +29,12 @@ export const cryptoApi = createApi({
         headers: cryptoApiHeaders,
       }),
     }),
+    GetExchanges: builder.query({
+      query: () => ({
+        url: `/exchanges`,
+        headers: cryptoApiHeaders,
+      }),
+    }),
   }),
 });
 
@@ -36,4 +42,5 @@ export const {
   useGetCryptosQuery,
   useGetCryptoDetailsQuery,
   useGetCryptoHistoryQuery,
+  useGetExchangesQuery,
 } = cryptoApi;
