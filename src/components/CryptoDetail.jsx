@@ -28,9 +28,15 @@ const { Option } = Select;
 const CryptoDetails = () => {
   const { coinId } = useParams();
   const [timeperiod, setTimeperiod] = useState("7d");
-  const { data, isLoading, isError } = useGetCryptoDetailsQuery(coinId);
-  if (isLoading) return <Loader />;
+  const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
+  const { data: coinHistory } = useGetCryptoHistoryQuery({
+    coinId,
+    timeperiod,
+  });
   const cryptoDetails = data?.data?.coin;
+
+  if (isFetching) return <Loader />;
+
   const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
 
   const stats = [
@@ -98,6 +104,7 @@ const CryptoDetails = () => {
       icon: <ExclamationCircleOutlined />,
     },
   ];
+
   return (
     <Col className="coin-detail-container">
       <Col className="coin-heading-container">
@@ -109,7 +116,7 @@ const CryptoDetails = () => {
           statistics, market cap and supply.
         </p>
       </Col>
-      <Select
+      {/* <Select
         defaultValue="7d"
         className="select-timeperiod"
         placeholder="Select Timeperiod"
@@ -118,8 +125,13 @@ const CryptoDetails = () => {
         {time.map((date) => (
           <Option key={date}>{date}</Option>
         ))}
-      </Select>
-      
+      </Select> */}
+      <LineChart
+        coinHistory={coinHistory}
+        currentPrice={millify(cryptoDetails?.price)}
+        coinName={cryptoDetails?.name}
+        iconUrl={data?.data?.coin.iconUrl}
+      />
       <Col className="stats-container">
         <Col className="coin-value-statistics">
           <Col className="coin-value-statistics-heading">
@@ -167,7 +179,7 @@ const CryptoDetails = () => {
           <Title level={3} className="coin-details-heading">
             What is {cryptoDetails.name}?
           </Title>
-          {HTMLReactParser(cryptoDetails.description)}
+            {HTMLReactParser(cryptoDetails.description)}
         </Row>
         <Col className="coin-links">
           <Title level={3} className="coin-details-heading">

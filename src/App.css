@@ -90,6 +90,7 @@ a:hover {
         margin-left: 50px;
         flex: 0.8;
     }
+
     .navbar {
         flex: 0.2;
     }
@@ -222,24 +223,6 @@ a:hover {
     padding-top: 20px;
 }
 
-.coin-desc-link h2 {
-    font-weight: 700;
-    color: var(--pink);
-}
-
-.coin-desc-link p {
-    font-size: 1rem;
-    opacity: 0.9;
-}
-
-.coin-desc-link a {
-    color: var(--pink);
-}
-
-.coin-desc-link h3 {
-    font-weight: 700;
-}
-
 .coin-desc {
     flex: 0.5;
 }
@@ -295,11 +278,18 @@ a:hover {
     .coin-detail-container {
         margin: 0;
     }
-}
 
-@media screen and (max-width: 500px) {
     .heading {
+        margin-top: 18px;
+    }
+
+    .chart-title-icon {
         margin-top: 20px;
+    }
+
+    .price-container {
+        margin-top: -35px;
+        margin-bottom: -8px;
     }
 }
 
@@ -348,6 +338,7 @@ a:hover {
 
 .chart-title {
     color: #0071bd !important;
+    margin-top: 9px;
 }
 
 .price-container {
@@ -401,42 +392,4 @@ a:hover {
 .select-timeperiod {
     width: 200px !important;
     margin-top: 20px !important;
-}
-
-/* .footer {
-    background-color: #001529;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
-} */
-
-.footer {
-    background-color: #001529;
-    /* Set your desired background color */
-    padding: 20px;
-    /* Adjust the padding as needed */
-    color: #fff;
-    /* Set the text color */
-}
-
-.footer a {
-    color: #fff;
-    /* Set link color */
-    margin: 0 10px;
-    /* Add margin between social icons */
-}
-
-.footer a:hover {
-    color: #1890ff;
-    /* Set link color on hover */
-}
-
-.footer .ant-typography {
-    color: #666;
-    /* Set the color for the copyright text */
-    text-align: center;
-    /* Center the copyright text */
-    margin-top: 1rem;
-    /* Adjust the top margin as needed */
 }
