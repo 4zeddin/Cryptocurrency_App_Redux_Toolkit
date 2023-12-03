@@ -4,7 +4,6 @@ Welcome to the React Cryptocurrency App, a powerful web application for tracking
 
 📊 Features:
 - Real-time cryptocurrency price tracking
-- Interactive charts powered by Chart.js
 - Detailed market statistics
 - Latest cryptocurrency news from Bing News API
 - User-friendly interface with Ant Design icons
@@ -12,14 +11,11 @@ Welcome to the React Cryptocurrency App, a powerful web application for tracking
 🔧 Technologies Used:
 - React
 - Redux Toolkit
+- RTK query
 - Ant Design
-- Axios
-- Chart.js
 - HTML React Parser
 - Millify
 - Moment
-- React Chartjs 2
-- Local Storage
 
 📈 Explore the world of cryptocurrencies and stay up-to-date with market trends. Try the React Cryptocurrency App today!
 
