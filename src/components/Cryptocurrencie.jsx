@@ -11,19 +11,6 @@ const Cryptocurrencie = ({ numberOfCardsToShow }) => {
   const [cryptos, setCryptos] = useState([]);
   const [search, setSearch] = useState("");
 
-  // Load search state from local storage on component mount
-  useEffect(() => {
-    const storedSearch = localStorage.getItem("cryptoSearch");
-    if (storedSearch) {
-      setSearch(storedSearch);
-    }
-  }, []);
-
-  // Save search state to local storage when it changes
-  useEffect(() => {
-    localStorage.setItem("cryptoSearch", search);
-  }, [search]);
-
   useEffect(() => {
     if (data?.data?.coins && search) {
       const filteredCryptos = data.data.coins.filter((c) =>
