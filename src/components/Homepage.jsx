@@ -13,26 +13,17 @@ const Homepage = () => {
   const [state, setState] = useState(null);
 
   useEffect(() => {
-    // Load data from local storage when the component mounts
-    const storedState = JSON.parse(localStorage.getItem("cryptoStats"));
-    if (storedState) {
-      setState(storedState);
-    }
-  }, []);
-
-  useEffect(() => {
     if (data && data.data && data.data.stats) {
       const stats = data.data.stats;
-      // Update state and store it in local storage
+      // Update state
       setState(stats);
-      localStorage.setItem("cryptoStats", JSON.stringify(stats));
     }
   }, [data]);
 
   if (isFetching || !state) {
     return (
       <h3>
-        <Loader /> 
+        <Loader />
       </h3>
     );
   }
