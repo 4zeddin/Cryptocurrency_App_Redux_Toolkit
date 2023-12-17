@@ -20,7 +20,7 @@ Welcome to the React Cryptocurrency App, a powerful web application for tracking
 📈 Explore the world of cryptocurrencies and stay up-to-date with market trends. Try the React Cryptocurrency App today!
 
 🔗 Live Demo:
-[Link to Live Demo]([your-live-demo-link](https://657f265258f3e60db895b646--tiny-smakager-f3dfcc.netlify.app/))
+[https://657f265258f3e60db895b646--tiny-smakager-f3dfcc.netlify.app/]
 
 📝 Installation and Usage:
 1. Clone this repository.
