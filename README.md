@@ -13,9 +13,6 @@ Welcome to the React Cryptocurrency App, a powerful web application for tracking
 - Redux Toolkit
 - RTK query
 - Ant Design
-- HTML React Parser
-- Millify
-- Moment
 
 📈 Explore the world of cryptocurrencies and stay up-to-date with market trends. Try the React Cryptocurrency App today!
 
